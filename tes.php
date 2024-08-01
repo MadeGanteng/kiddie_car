@@ -1,0 +1,1 @@
+SELECT  anggaran_tahunan.tahun, SUM(sub_biaya_operasional.sub_total) AS total FROM biaya_operasional, sub_biaya_operasional, anggaran_tahunan where biaya_operasional.id_biaya_operasional = sub_biaya_operasional.id_biaya_operasional AND anggaran_tahunan.tahun = biaya_operasional.tahun GROUP BY anggaran_tahunan.tahun
